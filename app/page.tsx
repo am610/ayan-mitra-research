@@ -10,18 +10,27 @@ export const metadata: Metadata = {
 const researchAreas = [
   {
     number: "01",
-    title: "Supernova cosmology",
-    text: "Using Type Ia supernovae to measure cosmic expansion while accounting for redshift uncertainty, selection effects, and observational bias.",
+    venue: "The Astrophysical Journal · 2026",
+    title:
+      "A Fully Photometric Approach to Type Ia Supernova Cosmology in the LSST Era",
+    text: "A complete cosmology analysis using photometrically classified Type Ia supernovae, host galaxy photometric redshifts, realistic contamination, and bias corrections.",
+    href: "https://doi.org/10.3847/1538-4357/ae7a41",
   },
   {
     number: "02",
-    title: "Scientific machine learning",
-    text: "Developing and evaluating classifiers and simulation based inference methods with careful attention to robustness and uncertainty.",
+    venue: "The Astrophysical Journal · 2026",
+    title:
+      "Probing Physics beyond the Standard Model through Combined Analyses of Next Generation Type Ia Supernova, Cosmic Microwave Background, and Baryon Acoustic Oscillation Surveys",
+    text: "Work led by Srinivasan Raghunathan combining Type Ia supernova, cosmic microwave background, and baryon acoustic oscillation measurements.",
+    href: "https://ui.adsabs.harvard.edu/abs/2026ApJ..1003..246R/abstract",
   },
   {
     number: "03",
-    title: "Research systems at scale",
-    text: "Building reproducible workflows that connect simulation, data preparation, classification, bias correction, and statistical inference on national supercomputers.",
+    venue: "Monthly Notices of the Royal Astronomical Society · 2026",
+    title:
+      "FlowSN: Neural Simulation Based Inference under Realistic Selection Effects Applied to Supernova Cosmology",
+    text: "A neural simulation based inference framework for supernova cosmology that models realistic survey selection effects.",
+    href: "https://ui.adsabs.harvard.edu/abs/2026MNRAS.550g1046B/abstract",
   },
 ];
 
@@ -487,22 +496,23 @@ export default function Home() {
       <section className="firstResearch" id="research">
         <div className="sectionIntro">
           <div>
-            <p className="sectionKicker">Research agenda</p>
-            <h2>Turning complex scientific workflows into trustworthy results.</h2>
+            <p className="sectionKicker">Current research</p>
+            <h2>Three papers defining my current LSST DESC research.</h2>
           </div>
           <p>
-            My research follows the full path from realistic simulations to
-            classification, uncertainty propagation, bias correction, and
-            cosmological inference.
+            Current work centers on fully photometric supernova cosmology,
+            combined cosmological probes, and simulation based inference.
           </p>
         </div>
         <div className="researchGrid">
           {researchAreas.map((area) => (
-            <article className="researchCard" key={area.number}>
+            <a className="researchCard" href={area.href} key={area.number}>
               <span>{area.number}</span>
+              <small className="researchVenue">{area.venue}</small>
               <h3>{area.title}</h3>
               <p>{area.text}</p>
-            </article>
+              <div className="researchLink">Read paper ↗</div>
+            </a>
           ))}
         </div>
       </section>

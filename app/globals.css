@@ -80,6 +80,7 @@ a {
 .primaryButton:focus-visible,
 .textLink:focus-visible,
 .builderCallout:focus-visible,
+.researchCard:focus-visible,
 .projectCard:focus-visible,
 .compactProject:focus-visible,
 .featuredPublication:focus-visible,
@@ -359,8 +360,17 @@ h1 {
 }
 
 .researchCard {
-  min-height: 330px;
+  display: flex;
+  min-height: 500px;
   padding: 40px 32px 36px 0;
+  flex-direction: column;
+  transition: background 180ms ease, padding 180ms ease, transform 180ms ease;
+}
+
+.researchCard:hover {
+  padding-left: 20px;
+  background: var(--white);
+  transform: translateY(-2px);
 }
 
 .researchCard + .researchCard {
@@ -377,14 +387,33 @@ h1 {
 }
 
 .researchCard h3 {
-  margin: 58px 0 18px;
-  font-size: 28px;
+  margin: 28px 0 18px;
+  font-size: 22px;
   font-weight: 500;
 }
 
 .researchCard p {
   margin: 0;
   font-size: 15px;
+}
+
+.researchVenue {
+  display: block;
+  margin-top: 32px;
+  color: var(--ink-soft);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.researchLink {
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
 }
 
 .newsBand {
