@@ -449,20 +449,6 @@ export default function Home() {
               ayan@illinois.edu
             </a>
           </div>
-          <a
-            className="builderCallout"
-            href="https://lsstdesc.org/pages/builders.html"
-          >
-            <span>Official recognition</span>
-            <div>
-              <strong>LSST DESC Builder</strong>
-              <p>
-                Listed by LSST DESC for significant contributions to the
-                collaboration, its community, and its analysis infrastructure.
-              </p>
-            </div>
-            <b>View official page ↗</b>
-          </a>
           <div className="evidenceStrip" aria-label="Research and software record">
             <div>
               <strong>33</strong>
@@ -569,9 +555,9 @@ export default function Home() {
             </div>
           </article>
           <article>
-            <time>Recognition</time>
+            <time>2026</time>
             <div>
-              <h3>Listed as an LSST DESC Builder</h3>
+              <h3>DESC Builder recognition</h3>
               <p>
                 The official DESC Builder page recognizes significant work that
                 builds the collaboration, its community, and its analysis systems.

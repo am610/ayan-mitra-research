@@ -79,7 +79,6 @@ a {
 .navLinks a:focus-visible,
 .primaryButton:focus-visible,
 .textLink:focus-visible,
-.builderCallout:focus-visible,
 .researchCard:focus-visible,
 .projectCard:focus-visible,
 .compactProject:focus-visible,
@@ -214,53 +213,6 @@ h1 {
   color: var(--ink);
   font-size: 14px;
   font-weight: 700;
-}
-
-.builderCallout {
-  display: grid;
-  max-width: 720px;
-  margin-top: 28px;
-  padding: 22px 0;
-  align-items: center;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  grid-template-columns: 120px 1fr auto;
-  gap: 22px;
-  transition: background 180ms ease, padding 180ms ease;
-}
-
-.builderCallout:hover {
-  padding-right: 16px;
-  padding-left: 16px;
-  background: var(--white);
-}
-
-.builderCallout > span {
-  color: var(--orange);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.builderCallout strong {
-  display: block;
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
-  font-weight: 500;
-}
-
-.builderCallout p {
-  margin: 5px 0 0;
-  font-size: 12px;
-  line-height: 1.45;
-}
-
-.builderCallout b {
-  color: var(--ink);
-  font-size: 11px;
-  white-space: nowrap;
 }
 
 .profileCard {
@@ -1231,16 +1183,6 @@ footer {
 
   .heroLead {
     font-size: 27px;
-  }
-
-  .builderCallout {
-    align-items: start;
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .builderCallout b {
-    white-space: normal;
   }
 
   .evidenceStrip,
