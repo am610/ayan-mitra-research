@@ -167,7 +167,7 @@ const publications = [
       "Catching the Cosmic Sign Flip: Background and Growth Tests of Smooth Sign Switching Lambda s CDM",
     venue: "arXiv, July 2026",
     bibcode: "2026arXiv260706735M",
-    featured: false,
+    featured: true,
   },
   {
     year: "2026",
@@ -190,7 +190,7 @@ const publications = [
       "Probing Physics beyond the Standard Model through Combined Analyses of Next Generation Type Ia Supernova, Cosmic Microwave Background, and Baryon Acoustic Oscillation Surveys",
     venue: "The Astrophysical Journal",
     bibcode: "2026ApJ..1003..246R",
-    featured: false,
+    featured: true,
   },
   {
     year: "2025",
@@ -198,7 +198,7 @@ const publications = [
       "Litmus Tests of the Flat Lambda CDM Model and Model Independent Measurement of H0 rd with LSST and DESI",
     venue: "Journal of Cosmology and Astroparticle Physics",
     bibcode: "2025JCAP...05..030L",
-    featured: false,
+    featured: true,
   },
   {
     year: "2025",
@@ -214,7 +214,7 @@ const publications = [
       "Dark Energy Reconstruction Analysis with Artificial Neural Networks: Application on Simulated Supernova Ia Data from Rubin Observatory",
     venue: "Physics of the Dark Universe",
     bibcode: "2024PDU....4601706M",
-    featured: true,
+    featured: false,
   },
   {
     year: "2024",
@@ -243,7 +243,7 @@ const publications = [
     title: "Probing Nuclear Physics with Supernova Gravitational Waves and Machine Learning",
     venue: "Monthly Notices of the Royal Astronomical Society",
     bibcode: "2024MNRAS.529.3582M",
-    featured: true,
+    featured: false,
   },
   {
     year: "2023",
@@ -258,7 +258,7 @@ const publications = [
       "Using Host Galaxy Photometric Redshifts to Improve Cosmological Constraints with Type Ia Supernovae in the LSST Era",
     venue: "The Astrophysical Journal",
     bibcode: "2023ApJ...944..212M",
-    featured: true,
+    featured: false,
   },
   {
     year: "2022",
@@ -498,38 +498,38 @@ export default function Home() {
             <h2 id="news-heading">Three directions shaping the next phase.</h2>
           </div>
           <p className="newsIntro">
-            Recent work links closure testing, simulation based inference, and
-            the reliability of scientific machine learning under distribution shift.
+            The newest work connects reliable scientific machine learning,
+            dynamical dark energy tests, and closure validation for LSST cosmology.
           </p>
         </div>
         <div className="newsList">
           <article>
             <time>2026</time>
             <div>
-              <h3>Machine learning closure audits</h3>
+              <h3>Generalization gap in supernova gravitational wave inference</h3>
+              <p>
+                Testing whether machine learning models retain reliable physical
+                inference when core collapse supernova simulations change.
+              </p>
+            </div>
+          </article>
+          <article>
+            <time>2026</time>
+            <div>
+              <h3>Catching the cosmic sign flip</h3>
+              <p>
+                Comparing background expansion and structure growth tests of
+                smooth sign switching dark energy models.
+              </p>
+            </div>
+          </article>
+          <article>
+            <time>2026</time>
+            <div>
+              <h3>Machine learning closure audits for LSST cosmology</h3>
               <p>
                 Testing whether a complete photometric supernova analysis recovers
                 known cosmology from controlled simulations.
-              </p>
-            </div>
-          </article>
-          <article>
-            <time>2026</time>
-            <div>
-              <h3>FlowSN</h3>
-              <p>
-                Neural simulation based inference for supernova cosmology under
-                realistic survey selection effects.
-              </p>
-            </div>
-          </article>
-          <article>
-            <time>2026</time>
-            <div>
-              <h3>Generalization in gravitational wave inference</h3>
-              <p>
-                Measuring the gap between high classification performance and
-                reliable physical inference when simulations change.
               </p>
             </div>
           </article>
