@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ayan-mitra-research.ayanmitra.chatgpt.site"),
   title: "Ayan Mitra | Research Scientist",
   description:
     "Research scientist working across cosmology, scientific machine learning, uncertainty, and reproducible computing.",
@@ -21,12 +22,22 @@ export const metadata: Metadata = {
     description:
       "Cosmology, scientific AI, uncertainty, and reproducible research systems.",
     type: "website",
+    url: "https://ayan-mitra-research.ayanmitra.chatgpt.site",
+    images: [
+      {
+        url: "/og.png",
+        width: 1672,
+        height: 941,
+        alt: "Ayan Mitra, Cosmology, Scientific AI, Reproducible Research",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ayan Mitra | Research Scientist",
     description:
       "Cosmology, scientific AI, uncertainty, and reproducible research systems.",
+    images: ["/og.png"],
   },
 };
 
