@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ayan-mitra-research.ayanmitra.chatgpt.site"),
-  title: "Ayan Mitra | Research Scientist",
+  title: "Ayan Mitra | Pipeline Scientist, LSST DESC",
   description:
-    "Research scientist working across cosmology, scientific machine learning, uncertainty, and reproducible computing.",
+    "Pipeline Scientist for LSST DESC working across cosmology, scientific machine learning, uncertainty, and reproducible computing.",
   openGraph: {
-    title: "Ayan Mitra | Research Scientist",
+    title: "Ayan Mitra | Pipeline Scientist, LSST DESC",
     description:
       "Cosmology, scientific AI, uncertainty, and reproducible research systems.",
     type: "website",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ayan Mitra | Research Scientist",
+    title: "Ayan Mitra | Pipeline Scientist, LSST DESC",
     description:
       "Cosmology, scientific AI, uncertainty, and reproducible research systems.",
     images: ["/og.png"],

@@ -79,6 +79,7 @@ a {
 .navLinks a:focus-visible,
 .primaryButton:focus-visible,
 .textLink:focus-visible,
+.builderCallout:focus-visible,
 .projectCard:focus-visible,
 .compactProject:focus-visible,
 .featuredPublication:focus-visible,
@@ -87,6 +88,9 @@ a {
 .allPublications summary:focus-visible,
 .publicationRow:focus-visible,
 .outlineButton:focus-visible,
+.newsList a:focus-visible,
+.photoControls button:focus-visible,
+.credentialsGrid a:focus-visible,
 footer a:focus-visible {
   outline: 3px solid #ffb18e;
   outline-offset: 4px;
@@ -209,6 +213,53 @@ h1 {
   color: var(--ink);
   font-size: 14px;
   font-weight: 700;
+}
+
+.builderCallout {
+  display: grid;
+  max-width: 720px;
+  margin-top: 28px;
+  padding: 22px 0;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: 120px 1fr auto;
+  gap: 22px;
+  transition: background 180ms ease, padding 180ms ease;
+}
+
+.builderCallout:hover {
+  padding-right: 16px;
+  padding-left: 16px;
+  background: var(--white);
+}
+
+.builderCallout > span {
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.builderCallout strong {
+  display: block;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.builderCallout p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.builderCallout b {
+  color: var(--ink);
+  font-size: 11px;
+  white-space: nowrap;
 }
 
 .profileCard {
@@ -390,12 +441,169 @@ footer h2 {
   font-size: 15px;
 }
 
+.newsList a {
+  display: inline-block;
+  margin-top: 12px;
+  border-bottom: 1px solid #ff9b6c;
+  color: #ffb18e;
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .projectsSection,
 .publicationsSection,
+.photoSection,
 .experienceSection {
   max-width: 1180px;
   margin: 0 auto;
   padding: 120px 40px;
+}
+
+.photoSection {
+  border-top: 1px solid var(--line);
+}
+
+.photoHeader {
+  display: grid;
+  align-items: end;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.6fr);
+  gap: 8vw;
+}
+
+.photoHeader h2 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(38px, 5vw, 62px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.photoHeader > p {
+  margin: 0;
+  font-size: 17px;
+}
+
+.photoCarousel {
+  margin-top: 64px;
+}
+
+.photoViewport {
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.photoTrack {
+  display: flex;
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.photoSlide {
+  display: grid;
+  min-width: 100%;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+}
+
+.photoPlaceholder {
+  display: flex;
+  min-height: 520px;
+  padding: 34px;
+  justify-content: space-between;
+  background:
+    linear-gradient(135deg, rgba(16, 43, 78, 0.96), rgba(39, 70, 101, 0.88)),
+    var(--ink);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.photoPlaceholder span {
+  color: #ff9b6c;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.photoPlaceholder strong {
+  align-self: center;
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 5vw, 58px);
+  font-weight: 500;
+  writing-mode: vertical-rl;
+}
+
+.photoCaption {
+  display: flex;
+  padding: 44px;
+  justify-content: flex-end;
+  background: var(--white);
+  flex-direction: column;
+}
+
+.photoCaption > span {
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.photoCaption h3 {
+  margin: 28px 0 14px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.photoCaption p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.photoControls {
+  display: flex;
+  margin-top: 22px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.photoControls > div:first-child {
+  display: flex;
+  gap: 10px;
+}
+
+.photoControls > div:first-child button {
+  width: 36px;
+  height: 4px;
+  padding: 0;
+  border: 0;
+  background: var(--line);
+  cursor: pointer;
+}
+
+.photoControls > div:first-child button.active {
+  background: var(--orange);
+}
+
+.photoArrows {
+  display: flex;
+  gap: 10px;
+}
+
+.photoArrows button {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.photoArrows button:hover {
+  background: var(--ink);
+  color: var(--white);
 }
 
 .projectsGrid {
@@ -910,6 +1118,7 @@ footer {
   .sectionIntro,
   .sectionHeadingRow,
   .publicationHeader,
+  .photoHeader,
   .experienceSection {
     grid-template-columns: 1fr;
     gap: 34px;
@@ -938,6 +1147,7 @@ footer {
   .newsBand,
   .projectsSection,
   .publicationsSection,
+  .photoSection,
   .experienceSection,
   footer {
     padding: 84px 24px;
@@ -965,6 +1175,18 @@ footer {
     border-top: 1px solid var(--line);
     border-left: 0;
   }
+
+  .photoSlide {
+    grid-template-columns: 1fr;
+  }
+
+  .photoPlaceholder {
+    min-height: 430px;
+  }
+
+  .photoPlaceholder strong {
+    writing-mode: horizontal-tb;
+  }
 }
 
 @media (max-width: 560px) {
@@ -980,6 +1202,16 @@ footer {
 
   .heroLead {
     font-size: 27px;
+  }
+
+  .builderCallout {
+    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .builderCallout b {
+    white-space: normal;
   }
 
   .evidenceStrip,
@@ -1015,6 +1247,20 @@ footer {
 
   .featuredPublication {
     min-height: 330px;
+  }
+
+  .photoPlaceholder {
+    min-height: 320px;
+    padding: 24px;
+    flex-direction: column;
+  }
+
+  .photoPlaceholder strong {
+    align-self: flex-start;
+  }
+
+  .photoCaption {
+    padding: 30px 24px;
   }
 
   .newsList article,

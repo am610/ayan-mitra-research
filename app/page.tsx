@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import PhotoCarousel from "./PhotoCarousel";
 
 export const metadata: Metadata = {
-  title: "Ayan Mitra | Research Scientist",
+  title: "Ayan Mitra | Pipeline Scientist, LSST DESC",
   description:
-    "Research scientist working across cosmology, scientific machine learning, open research software, and reproducible computing.",
+    "Pipeline Scientist for LSST DESC working across cosmology, scientific machine learning, open research software, and reproducible computing.",
 };
 
 const researchAreas = [
@@ -408,16 +409,17 @@ export default function Home() {
         </a>
         <div className="navLinks">
           <a href="#research">Research</a>
+          <a href="#updates">Updates</a>
           <a href="#projects">Projects</a>
           <a href="#publications">Publications</a>
-          <a href="#experience">Experience</a>
+          <a href="#photos">Photos</a>
           <a href="/Ayan_Mitra_CV.pdf">CV</a>
         </div>
       </nav>
 
       <section className="hero" id="home">
         <div className="heroCopy">
-          <p className="eyebrow">Research Scientist · Cosmology · Scientific AI</p>
+          <p className="eyebrow">Pipeline Scientist · LSST DESC · Cosmology</p>
           <h1>Ayan Mitra</h1>
           <p className="heroLead">
             I build reliable computational systems that connect simulation,
@@ -425,9 +427,9 @@ export default function Home() {
             science.
           </p>
           <p className="heroBody">
-            I am a CAPS Fellow and Pipeline Scientist at NCSA, UIUC and the Vera
-            C. Rubin Observatory LSST Dark Energy Science Collaboration. My work
-            focuses on supernova cosmology, reproducible research pipelines, and
+            I am a Pipeline Scientist for the Vera C. Rubin Observatory LSST Dark
+            Energy Science Collaboration and a CAPS Fellow at NCSA, UIUC. My work
+            focuses on supernova cosmology, reliable research pipelines, and
             scientific machine learning at scale.
           </p>
           <div className="heroActions">
@@ -438,6 +440,20 @@ export default function Home() {
               ayan@illinois.edu
             </a>
           </div>
+          <a
+            className="builderCallout"
+            href="https://lsstdesc.org/pages/builders.html"
+          >
+            <span>Official recognition</span>
+            <div>
+              <strong>LSST DESC Builder</strong>
+              <p>
+                Listed by LSST DESC for significant contributions to the
+                collaboration, its community, and its analysis infrastructure.
+              </p>
+            </div>
+            <b>View official page ↗</b>
+          </a>
           <div className="evidenceStrip" aria-label="Research and software record">
             <div>
               <strong>33</strong>
@@ -457,8 +473,8 @@ export default function Home() {
         <aside className="profileCard" aria-label="Ayan Mitra profile">
           <img src="/ayan-mitra.jpg" alt="Ayan Mitra" />
           <div className="profileCardBody">
-            <p className="profileRole">CAPS Fellow and Pipeline Scientist</p>
-            <p>NCSA · University of Illinois Urbana Champaign</p>
+            <p className="profileRole">Pipeline Scientist · LSST DESC</p>
+            <p>CAPS Fellow · NCSA · University of Illinois Urbana Champaign</p>
             <div className="profileLinks">
               <a href="https://github.com/am610/">GitHub</a>
               <a href="https://www.linkedin.com/in/ayan-mitra-supernova/">LinkedIn</a>
@@ -491,46 +507,68 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="newsBand" aria-labelledby="news-heading">
+      <section className="newsBand" id="updates" aria-labelledby="news-heading">
         <div className="sectionHeadingRow">
           <div>
-            <p className="sectionKicker lightKicker">Current research</p>
-            <h2 id="news-heading">Three directions shaping the next phase.</h2>
+            <p className="sectionKicker lightKicker">Updates</p>
+            <h2 id="news-heading">Recent news and milestones.</h2>
           </div>
           <p className="newsIntro">
-            The newest work connects reliable scientific machine learning,
-            dynamical dark energy tests, and closure validation for LSST cosmology.
+            New publications, collaboration recognition, and pipeline work from
+            the latest stage of my LSST DESC activity.
           </p>
         </div>
         <div className="newsList">
           <article>
-            <time>2026</time>
+            <time>July 2026</time>
             <div>
-              <h3>Generalization gap in supernova gravitational wave inference</h3>
+              <h3>Three new manuscripts released</h3>
               <p>
-                Testing whether machine learning models retain reliable physical
-                inference when core collapse supernova simulations change.
+                New work covers machine learning generalization in supernova
+                gravitational waves, cosmic sign switching, and LSST closure audits.
               </p>
+              <a href="https://ui.adsabs.harvard.edu/user/libraries/LiNzugQqT8O3JaIcS3XMeQ">
+                View ADS library ↗
+              </a>
             </div>
           </article>
           <article>
             <time>2026</time>
             <div>
-              <h3>Catching the cosmic sign flip</h3>
+              <h3>FlowSN published in MNRAS</h3>
               <p>
-                Comparing background expansion and structure growth tests of
-                smooth sign switching dark energy models.
+                Neural simulation based inference was applied to supernova
+                cosmology under realistic survey selection effects.
               </p>
+              <a href="https://ui.adsabs.harvard.edu/abs/2026MNRAS.550g1046B/abstract">
+                Open publication ↗
+              </a>
             </div>
           </article>
           <article>
             <time>2026</time>
             <div>
-              <h3>Machine learning closure audits for LSST cosmology</h3>
+              <h3>Beyond the Standard Model study published in ApJ</h3>
               <p>
-                Testing whether a complete photometric supernova analysis recovers
-                known cosmology from controlled simulations.
+                A combined analysis connects next generation supernova, cosmic
+                microwave background, and baryon acoustic oscillation surveys.
               </p>
+              <a href="https://ui.adsabs.harvard.edu/abs/2026ApJ..1003..246R/abstract">
+                Open publication ↗
+              </a>
+            </div>
+          </article>
+          <article>
+            <time>Recognition</time>
+            <div>
+              <h3>Listed as an LSST DESC Builder</h3>
+              <p>
+                The official DESC Builder page recognizes significant work that
+                builds the collaboration, its community, and its analysis systems.
+              </p>
+              <a href="https://lsstdesc.org/pages/builders.html">
+                View official DESC Builder page ↗
+              </a>
             </div>
           </article>
         </div>
@@ -679,6 +717,8 @@ export default function Home() {
         </details>
       </section>
 
+      <PhotoCarousel />
+
       <section className="experienceSection" id="experience">
         <div className="experienceIntro">
           <p className="sectionKicker">Experience</p>
@@ -688,7 +728,7 @@ export default function Home() {
           <article>
             <time>2023 to present</time>
             <div>
-              <h3>CAPS Fellow and Pipeline Scientist</h3>
+              <h3>Pipeline Scientist and CAPS Fellow</h3>
               <p>NCSA, UIUC and LSST Dark Energy Science Collaboration</p>
             </div>
           </article>
@@ -715,8 +755,10 @@ export default function Home() {
           </article>
           <article>
             <p className="miniLabel">Community</p>
-            <h3>LSST DESC Builder and reviewer</h3>
-            <p>Mentoring, collaboration review, and service across astronomy.</p>
+            <h3>
+              <a href="https://lsstdesc.org/pages/builders.html">LSST DESC Builder ↗</a>
+            </h3>
+            <p>Official recognition for contributions to the collaboration and its infrastructure.</p>
           </article>
           <article>
             <p className="miniLabel">Recognition</p>
