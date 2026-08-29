@@ -189,8 +189,7 @@ h1 {
   width: 100%;
   aspect-ratio: 4 / 4.6;
   object-fit: cover;
-  object-position: center 28%;
-  filter: saturate(0.78) contrast(1.03);
+  object-position: center 42%;
 }
 
 .profileCardBody {
