@@ -267,6 +267,17 @@ export default function AcademicHome({
             <h2>Education</h2>
             <p><strong>PhD, 2016</strong><br />Supernova Cosmology, Sorbonne Université</p>
             <p><strong>MSc, 2013</strong><br />Astronomy and Astrophysics, University of Sussex</p>
+            <div className="academicEducationEntry">
+              <div className="academicInstitutionMarks" aria-label="St. Xavier’s College and University of Calcutta">
+                <a className="academicMarkXavier" href="https://www.sxccal.edu/" aria-label="St. Xavier’s College official website">SXC</a>
+                <a className="academicMarkCalcutta" href="https://www.caluniv.ac.in/" aria-label="University of Calcutta official website">CU</a>
+              </div>
+              <p>
+                <strong>2008 to 2011</strong><br />
+                <a href="https://www.sxccal.edu/">St. Xavier’s College</a><br />
+                <a href="https://www.caluniv.ac.in/">University of Calcutta</a>
+              </p>
+            </div>
           </section>
 
           <section>
