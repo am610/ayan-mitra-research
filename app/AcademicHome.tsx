@@ -291,7 +291,8 @@ export default function AcademicHome({
 
           <section>
             <h2>Research Record</h2>
-            <p><strong>33</strong> records in the supplied ADS library</p>
+            <p><strong>33</strong> records in ADS library</p>
+            <p><strong>76</strong> works in ORCID</p>
             <p><strong>79</strong> public GitHub repositories</p>
           </section>
         </aside>
