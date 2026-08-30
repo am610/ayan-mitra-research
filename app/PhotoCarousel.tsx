@@ -1,34 +1,25 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-type PhotoSlide = {
-  src: string;
-  caption: string;
-};
-
-const photos: PhotoSlide[] = Array.from({ length: 50 }, (_, i) => ({
-  src: `/photos/photo${i + 1}.jpg`,
-  caption: "Moments from research workshops, conferences, and DESC collaboration events.",
-}));
+import { photosData } from "./photosData";
 
 export default function PhotoCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % photos.length);
+      setActiveIndex((current) => (current + 1) % photosData.length);
     }, 3500);
 
     return () => clearInterval(timer);
   }, []);
 
   const showPrevious = () => {
-    setActiveIndex((current) => (current + photos.length - 1) % photos.length);
+    setActiveIndex((current) => (current + photosData.length - 1) % photosData.length);
   };
 
   const showNext = () => {
-    setActiveIndex((current) => (current + 1) % photos.length);
+    setActiveIndex((current) => (current + 1) % photosData.length);
   };
 
   return (
@@ -49,19 +40,19 @@ export default function PhotoCarousel() {
             className="photoTrack"
             style={{ transform: `translateX(-${activeIndex * 100}%)` }}
           >
-            {photos.map((photo, index) => (
+            {photosData.map((photo, index) => (
               <article className="photoSlide" key={photo.src}>
                 <div className="photoPlaceholder">
                   <img
                     src={photo.src}
-                    alt={`Research and collaboration photo ${index + 1}`}
+                    alt={photo.title || `Research and collaboration photo ${index + 1}`}
                     className="photoCardImage"
                     loading={index === 0 ? "eager" : "lazy"}
                   />
                 </div>
                 <div className="photoCaption">
-                  <h3>Photos from the Past</h3>
-                  <p>Moments & Events</p>
+                  <h3>{photo.title}</h3>
+                  <p>{photo.caption}</p>
                 </div>
               </article>
             ))}
@@ -70,7 +61,7 @@ export default function PhotoCarousel() {
 
         <div className="photoControls">
           <div className="photoDotsScrollable">
-            {photos.map((photo, index) => (
+            {photosData.map((photo, index) => (
               <button
                 className={index === activeIndex ? "active" : ""}
                 key={photo.src}
@@ -94,6 +85,7 @@ export default function PhotoCarousel() {
     </section>
   );
 }
+
 
 
 
