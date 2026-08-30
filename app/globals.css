@@ -1629,40 +1629,42 @@ footer {
 .academicEducationEntry {
   display: grid;
   margin-top: 14px;
-  align-items: start;
-  grid-template-columns: 42px 1fr;
+  align-items: center;
+  grid-template-columns: 72px 1fr;
   gap: 10px;
 }
 
-.academicInstitutionMarks {
+.academicInstitutionLogo {
   display: grid;
-  gap: 5px;
-}
-
-.academicInstitutionMarks a {
-  display: grid;
-  width: 36px;
-  height: 36px;
+  width: 68px;
+  min-height: 52px;
+  padding: 5px;
   place-items: center;
-  border: 1px solid rgba(19, 41, 75, 0.18);
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  box-shadow: 0 2px 6px rgba(19, 41, 75, 0.12);
+  border: 1px solid rgba(19, 41, 75, 0.14);
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: 0 2px 7px rgba(19, 41, 75, 0.1);
 }
 
-.academicInstitutionMarks .academicMarkXavier {
-  background: #8d1c2e;
+.academicInstitutionLogo img {
+  display: block;
+  width: 100%;
+  max-height: 46px;
+  object-fit: contain;
 }
 
-.academicInstitutionMarks .academicMarkCalcutta {
-  background: #163d72;
+.academicLogoSussex img {
+  width: 48px;
 }
 
 .academicEducationEntry p {
   margin: 0;
+}
+
+.academicEducationPlain {
+  margin-top: 15px;
+  padding-top: 13px;
+  border-top: 1px solid rgba(19, 41, 75, 0.13);
 }
 
 .academicMain .photoSection {

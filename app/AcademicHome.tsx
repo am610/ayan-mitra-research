@@ -265,13 +265,19 @@ export default function AcademicHome({
 
           <section>
             <h2>Education</h2>
-            <p><strong>PhD, 2016</strong><br />Supernova Cosmology, Sorbonne Université</p>
-            <p><strong>MSc, 2013</strong><br />Astronomy and Astrophysics, University of Sussex</p>
             <div className="academicEducationEntry">
-              <div className="academicInstitutionMarks" aria-label="St. Xavier’s College and University of Calcutta">
-                <a className="academicMarkXavier" href="https://www.sxccal.edu/" aria-label="St. Xavier’s College official website">SXC</a>
-                <a className="academicMarkCalcutta" href="https://www.caluniv.ac.in/" aria-label="University of Calcutta official website">CU</a>
-              </div>
+              <a className="academicInstitutionLogo academicLogoSorbonne" href="https://www.sorbonne-universite.fr/en" aria-label="Sorbonne Université official website">
+                <img src="https://www.sorbonne-universite.fr/sites/default/files/media/2019-10/logo_4.svg" alt="Sorbonne Université" />
+              </a>
+              <p><strong>PhD, 2016</strong><br />Supernova Cosmology, Sorbonne Université</p>
+            </div>
+            <div className="academicEducationEntry">
+              <a className="academicInstitutionLogo academicLogoSussex" href="https://www.sussex.ac.uk/" aria-label="University of Sussex official website">
+                <img src="https://www.sussex.ac.uk/images/logo.png" alt="University of Sussex" />
+              </a>
+              <p><strong>MSc, 2013</strong><br />Astronomy and Astrophysics, University of Sussex</p>
+            </div>
+            <div className="academicEducationPlain">
               <p>
                 <strong>2008 to 2011</strong><br />
                 <a href="https://www.sxccal.edu/">St. Xavier’s College</a><br />
