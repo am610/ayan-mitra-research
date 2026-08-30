@@ -1848,18 +1848,191 @@ footer {
   font-size: 23px;
 }
 
-.academicFooter {
-  display: flex;
-  width: min(1100px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 28px 0 42px;
-  justify-content: space-between;
-  color: #657384;
-  font-size: 12px;
+/* Interests & Media Section */
+.interestsSection {
+  margin-top: 40px;
 }
 
-.academicFooter p {
+.interestsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.interestCard {
+  background: #ffffff;
+  border: 1px solid rgba(19, 41, 75, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(19, 41, 75, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.interestCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(19, 41, 75, 0.12);
+}
+
+.videoEmbedContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background: #000000;
+}
+
+.videoEmbedContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.interestImageContainer {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #0d1b2a;
+}
+
+.interestImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.interestContent {
+  padding: 20px 22px 24px;
+}
+
+.interestCategory {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ff7f32;
+  margin-bottom: 6px;
+}
+
+.interestContent h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #13294b;
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.interestContent p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #475569;
   margin: 0;
+}
+
+/* Professional Footer Styling */
+.academicFooter {
+  width: 100%;
+  margin-top: 60px;
+  background: #0b1726;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 44px 0 36px;
+}
+
+.academicFooterInner {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.academicFooterBrand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+
+.academicFooterSub {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0 0 14px;
+}
+
+.academicFooterCopy {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+}
+
+.academicFooterRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.academicFooterNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.academicFooterNav a {
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.academicFooterNav a:hover {
+  color: #ff9b6c;
+}
+
+.academicFooterEmail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.academicFooterEmail:hover {
+  background: #ff7f32;
+  border-color: #ff7f32;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(255, 127, 50, 0.35);
+}
+
+.academicBackToTop {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.academicBackToTop:hover {
+  color: #ffffff;
 }
 
 .academicPage a:focus-visible,
@@ -1902,12 +2075,26 @@ footer {
     align-self: start;
     grid-row: span 2;
   }
+
+  .academicFooterInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .academicFooterRight {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .academicFooterNav {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 620px) {
   .academicFrame,
-  .academicNavInner,
-  .academicFooter {
+  .academicNavInner {
     width: min(100% - 20px, 1100px);
   }
 
@@ -1949,10 +2136,5 @@ footer {
 
   .academicMain .photoPlaceholder {
     min-height: 280px;
-  }
-
-  .academicFooter {
-    flex-direction: column;
-    gap: 8px;
   }
 }

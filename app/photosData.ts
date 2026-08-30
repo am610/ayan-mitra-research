@@ -287,23 +287,5 @@ export const photosData: PhotoItem[] = [
     src: "/photos/photo47.jpg",
     title: "Photos from the Past",
     caption: "Moments & Events"
-  },
-  {
-    id: 48,
-    src: "/photos/photo48.jpg",
-    title: "Photos from the Past",
-    caption: "Moments & Events"
-  },
-  {
-    id: 49,
-    src: "/photos/photo49.jpg",
-    title: "Photos from the Past",
-    caption: "Moments & Events"
-  },
-  {
-    id: 50,
-    src: "/photos/photo50.jpg",
-    title: "Photos from the Past",
-    caption: "Moments & Events"
   }
 ];

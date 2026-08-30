@@ -1,4 +1,5 @@
 import PhotoCarousel from "./PhotoCarousel";
+import InterestsSection from "./InterestsSection";
 import { FaEnvelope, FaGithub, FaLinkedinIn, FaOrcid } from "react-icons/fa6";
 import { HiOutlineBookOpen } from "react-icons/hi2";
 
@@ -86,6 +87,7 @@ export default function AcademicHome({
             <a href="#projects">Projects</a>
             <a href="#publications">Publications</a>
             <a href="#photos">Photos</a>
+            <a href="#interests">Interests</a>
             <a href="/Ayan_Mitra_CV.pdf">CV</a>
           </div>
         </div>
@@ -228,6 +230,7 @@ export default function AcademicHome({
           </section>
 
           <PhotoCarousel />
+          <InterestsSection />
         </main>
 
         <aside className="academicSidebar" aria-label="Profile information">
@@ -319,8 +322,27 @@ export default function AcademicHome({
       </div>
 
       <footer className="academicFooter">
-        <p>© 2026 Ayan Mitra</p>
-        <a href="mailto:ayan@illinois.edu">ayan@illinois.edu</a>
+        <div className="academicFooterInner">
+          <div className="academicFooterLeft">
+            <p className="academicFooterBrand">Ayan Mitra</p>
+            <p className="academicFooterSub">Pipeline Scientist, LSST DESC · CAPS Fellow, NCSA</p>
+            <p className="academicFooterCopy">© 2026 Ayan Mitra. All rights reserved.</p>
+          </div>
+          <div className="academicFooterRight">
+            <div className="academicFooterNav">
+              <a href="#home">Home</a>
+              <a href="#research">Research</a>
+              <a href="#projects">Projects</a>
+              <a href="#publications">Publications</a>
+              <a href="#photos">Photos</a>
+              <a href="#interests">Interests</a>
+              <a href="/Ayan_Mitra_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+            </div>
+            <a href="mailto:ayan@illinois.edu" className="academicFooterEmail">
+              <FaEnvelope /> ayan@illinois.edu
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
