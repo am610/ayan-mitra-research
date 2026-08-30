@@ -1738,12 +1738,34 @@ footer {
   color: #13294b;
 }
 
-.academicEducationEntry {
+.academicEducationEntry,
+.academicPositionEntry {
   display: grid;
   margin-top: 14px;
   align-items: center;
   grid-template-columns: 72px 1fr;
   gap: 10px;
+}
+
+.academicPositionEntry p {
+  margin: 0;
+}
+
+.academicLogoGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 68px;
+}
+
+.academicLogoGroup .academicInstitutionLogo {
+  width: 68px;
+  min-height: 28px;
+  padding: 3px 5px;
+}
+
+.academicLogoGroup .academicInstitutionLogo img {
+  max-height: 22px;
 }
 
 .academicInstitutionLogo {
