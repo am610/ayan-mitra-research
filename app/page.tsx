@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PhotoCarousel from "./PhotoCarousel";
+import AcademicHome from "./AcademicHome";
 
 export const metadata: Metadata = {
   title: "Ayan Mitra | Pipeline Scientist, LSST DESC",
@@ -36,7 +37,7 @@ const researchAreas = [
 
 const flagshipProjects = [
   {
-    title: "SNANA Pipeline Assistant",
+    title: "Supernova Pipeline Operations Assistant",
     category: "Agentic AI",
     highlight: "Source grounded diagnostics",
     text: "An operations assistant for scientific pipelines that diagnoses configuration, memory, stale lock, and scheduler problems while tracing answers to curated sources.",
@@ -409,7 +410,7 @@ const publications = [
 
 const featuredPublications = publications.filter((publication) => publication.featured);
 
-export default function Home() {
+function LegacyHome() {
   return (
     <main>
       <nav className="siteNav" aria-label="Primary navigation">
@@ -460,7 +461,7 @@ export default function Home() {
             </div>
             <div>
               <strong>74</strong>
-              <span>Merged SNANA pull requests</span>
+              <span>Merged software contributions</span>
             </div>
           </div>
         </div>
@@ -620,7 +621,7 @@ export default function Home() {
         <div className="openSourceInner">
           <div>
             <p className="sectionKicker lightKicker">Major open source contribution</p>
-            <h2>SNANA</h2>
+            <h2>Supernova analysis software</h2>
           </div>
           <div>
             <strong>74</strong>
@@ -781,5 +782,17 @@ export default function Home() {
         </div>
       </footer>
     </main>
+  );
+}
+
+export default function Home() {
+  return (
+    <AcademicHome
+      researchAreas={researchAreas}
+      flagshipProjects={flagshipProjects}
+      additionalProjects={additionalProjects}
+      publications={publications}
+      featuredPublications={featuredPublications}
+    />
   );
 }
