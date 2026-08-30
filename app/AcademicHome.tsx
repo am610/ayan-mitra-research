@@ -242,14 +242,9 @@ export default function AcademicHome({
               <p><strong>Pipeline Scientist</strong><br />LSST Dark Energy Science Collaboration</p>
             </div>
             <div className="academicPositionEntry">
-              <div className="academicLogoGroup">
-                <a className="academicInstitutionLogo academicLogoNcsa" href="https://www.ncsa.illinois.edu/" target="_blank" rel="noopener noreferrer" aria-label="NCSA official website">
-                  <img src="/logos/ncsa-logo.svg" alt="NCSA" />
-                </a>
-                <a className="academicInstitutionLogo academicLogoUiuc" href="https://illinois.edu/" target="_blank" rel="noopener noreferrer" aria-label="University of Illinois Urbana-Champaign official website">
-                  <img src="/logos/uiuc-logo.png" alt="UIUC" />
-                </a>
-              </div>
+              <a className="academicInstitutionLogo academicLogoNcsa" href="https://www.ncsa.illinois.edu/" target="_blank" rel="noopener noreferrer" aria-label="NCSA official website">
+                <img src="/logos/ncsa-logo.svg" alt="NCSA" />
+              </a>
               <p><strong>CAPS Fellow</strong><br />NCSA, University of Illinois Urbana Champaign</p>
             </div>
           </section>
