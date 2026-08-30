@@ -1,4 +1,6 @@
 import PhotoCarousel from "./PhotoCarousel";
+import { FaEnvelope, FaGithub, FaLinkedinIn, FaOrcid } from "react-icons/fa6";
+import { HiOutlineBookOpen } from "react-icons/hi2";
 
 type ResearchPaper = {
   number: string;
@@ -96,11 +98,26 @@ export default function AcademicHome({
               parameter estimation across large computing systems.
             </p>
             <div className="academicContactLinks">
-              <a href="mailto:ayan@illinois.edu">Email</a>
-              <a href="https://github.com/am610/">GitHub</a>
-              <a href="https://www.linkedin.com/in/ayan-mitra-supernova/">LinkedIn</a>
-              <a href="https://orcid.org/0000-0002-9436-8871">ORCID</a>
-              <a href="https://ui.adsabs.harvard.edu/user/libraries/LiNzugQqT8O3JaIcS3XMeQ">ADS</a>
+              <a className="contactEmail" href="mailto:ayan@illinois.edu" aria-label="Email Ayan Mitra">
+                <FaEnvelope aria-hidden="true" />
+                <span>Email</span>
+              </a>
+              <a className="contactGithub" href="https://github.com/am610/" aria-label="Ayan Mitra on GitHub">
+                <FaGithub aria-hidden="true" />
+                <span>GitHub</span>
+              </a>
+              <a className="contactLinkedin" href="https://www.linkedin.com/in/ayan-mitra-supernova/" aria-label="Ayan Mitra on LinkedIn">
+                <FaLinkedinIn aria-hidden="true" />
+                <span>LinkedIn</span>
+              </a>
+              <a className="contactOrcid" href="https://orcid.org/0000-0002-9436-8871" aria-label="Ayan Mitra on ORCID">
+                <FaOrcid aria-hidden="true" />
+                <span>ORCID</span>
+              </a>
+              <a className="contactAds" href="https://ui.adsabs.harvard.edu/user/libraries/LiNzugQqT8O3JaIcS3XMeQ" aria-label="Ayan Mitra publications on ADS">
+                <HiOutlineBookOpen aria-hidden="true" />
+                <span>ADS</span>
+              </a>
             </div>
           </header>
 
@@ -234,6 +251,7 @@ export default function AcademicHome({
           <section>
             <h2>Recognition</h2>
             <p><a href="https://lsstdesc.org/pages/builders.html">LSST DESC Builder</a>, 2026</p>
+            <p><strong>Lagrange Fellow</strong><br />Institut d’Astrophysique de Paris, during PhD</p>
             <p>CAPS Fellow</p>
             <p>Rubin Postdoctoral Fellow</p>
           </section>
