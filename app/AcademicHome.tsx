@@ -251,9 +251,9 @@ export default function AcademicHome({
           <section>
             <h2>Recognition</h2>
             <p><a href="https://lsstdesc.org/pages/builders.html">LSST DESC Builder</a>, 2026</p>
-            <p><strong>Lagrange Fellow</strong><br />Institut d’Astrophysique de Paris, during PhD</p>
             <p>CAPS Fellow</p>
             <p>Rubin Postdoctoral Fellow</p>
+            <p><strong>Lagrange Fellow</strong><br />Institut d’Astrophysique de Paris, during PhD</p>
           </section>
 
           <section>
