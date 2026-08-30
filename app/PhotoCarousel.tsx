@@ -1,46 +1,45 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const slides = [
-  {
-    number: "01",
-    title: "Event photo placeholder",
-    text: "Your first event photo, event name, date, location, and caption will appear here.",
-  },
-  {
-    number: "02",
-    title: "Conference photo placeholder",
-    text: "A conference, collaboration meeting, presentation, or workshop photo can be added here.",
-  },
-  {
-    number: "03",
-    title: "Community photo placeholder",
-    text: "A DESC community, mentoring, outreach, or team event photo can be added here.",
-  },
-];
+type PhotoSlide = {
+  src: string;
+  caption: string;
+};
+
+const photos: PhotoSlide[] = Array.from({ length: 50 }, (_, i) => ({
+  src: `/photos/photo${i + 1}.jpg`,
+  caption: "Moments from research workshops, conferences, and DESC collaboration events.",
+}));
 
 export default function PhotoCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % photos.length);
+    }, 3500);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const showPrevious = () => {
-    setActiveIndex((current) => (current + slides.length - 1) % slides.length);
+    setActiveIndex((current) => (current + photos.length - 1) % photos.length);
   };
 
   const showNext = () => {
-    setActiveIndex((current) => (current + 1) % slides.length);
+    setActiveIndex((current) => (current + 1) % photos.length);
   };
 
   return (
     <section className="photoSection" id="photos" aria-labelledby="photosHeading">
       <div className="photoHeader">
         <div>
-          <p className="sectionKicker">Photos and events</p>
+          <p className="sectionKicker">PHOTOS AND EVENTS</p>
           <h2 id="photosHeading">Moments from the collaboration and beyond.</h2>
         </div>
         <p>
-          This gallery is ready for the photos and event details you will provide.
-          Each image will have its own title, date, location, and caption.
+          Moments from research workshops, conferences, and DESC team events.
         </p>
       </div>
 
@@ -50,16 +49,19 @@ export default function PhotoCarousel() {
             className="photoTrack"
             style={{ transform: `translateX(-${activeIndex * 100}%)` }}
           >
-            {slides.map((slide) => (
-              <article className="photoSlide" key={slide.number}>
-                <div className="photoPlaceholder" aria-hidden="true">
-                  <span>{slide.number}</span>
-                  <strong>Photo coming soon</strong>
+            {photos.map((photo, index) => (
+              <article className="photoSlide" key={photo.src}>
+                <div className="photoPlaceholder">
+                  <img
+                    src={photo.src}
+                    alt={`Research and collaboration photo ${index + 1}`}
+                    className="photoCardImage"
+                    loading={index === 0 ? "eager" : "lazy"}
+                  />
                 </div>
                 <div className="photoCaption">
-                  <span>Gallery placeholder {slide.number}</span>
-                  <h3>{slide.title}</h3>
-                  <p>{slide.text}</p>
+                  <h3>Photos from the Past</h3>
+                  <p>Moments & Events</p>
                 </div>
               </article>
             ))}
@@ -67,14 +69,14 @@ export default function PhotoCarousel() {
         </div>
 
         <div className="photoControls">
-          <div>
-            {slides.map((slide, index) => (
+          <div className="photoDotsScrollable">
+            {photos.map((photo, index) => (
               <button
                 className={index === activeIndex ? "active" : ""}
-                key={slide.number}
+                key={photo.src}
                 type="button"
                 onClick={() => setActiveIndex(index)}
-                aria-label={`Show photo placeholder ${index + 1}`}
+                aria-label={`Show photo ${index + 1}`}
                 aria-current={index === activeIndex ? "true" : undefined}
               />
             ))}
@@ -92,3 +94,7 @@ export default function PhotoCarousel() {
     </section>
   );
 }
+
+
+
+
