@@ -36,6 +36,16 @@ type AcademicHomeProps = {
 
 const recentNews = [
   {
+    date: "2026",
+    title: "Appointed as Panel Member for the NOIRLab Time Allocation Committee (2026B)",
+    href: "https://noirlab.edu/",
+  },
+  {
+    date: "2025–2026",
+    title: "Awarded ACME-TNA Fellowship Grant",
+    href: "#",
+  },
+  {
     date: "Jul 2026",
     title: "Fully photometric LSST supernova cosmology analysis published in The Astrophysical Journal",
     href: "https://doi.org/10.3847/1538-4357/ae7a41",
@@ -268,7 +278,7 @@ export default function AcademicHome({
             <p><a href="https://lsstdesc.org/pages/builders.html">LSST DESC Builder</a>, 2026</p>
             <p>CAPS Fellow</p>
             <p>Rubin Postdoctoral Fellow</p>
-            <p><strong>Lagrange Fellow</strong><br />Institut d’Astrophysique de Paris, during PhD</p>
+            <p>Lagrange Fellow<br />Institut d’Astrophysique de Paris, during PhD</p>
           </section>
 
           <section>
