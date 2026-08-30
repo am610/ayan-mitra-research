@@ -1853,6 +1853,37 @@ footer {
   margin-top: 40px;
 }
 
+.interestsFilterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.interestsFilterBar button {
+  background: rgba(19, 41, 75, 0.05);
+  border: 1px solid rgba(19, 41, 75, 0.12);
+  color: #13294b;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.interestsFilterBar button:hover {
+  background: rgba(19, 41, 75, 0.1);
+}
+
+.interestsFilterBar button.active {
+  background: #13294b;
+  color: #ffffff;
+  border-color: #13294b;
+  box-shadow: 0 3px 10px rgba(19, 41, 75, 0.2);
+}
+
 .interestsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
