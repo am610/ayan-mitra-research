@@ -277,7 +277,10 @@ export default function AcademicHome({
               </a>
               <p><strong>MSc, 2013</strong><br />Astronomy and Astrophysics, University of Sussex</p>
             </div>
-            <div className="academicEducationPlain">
+            <div className="academicEducationEntry">
+              <a className="academicInstitutionLogo academicLogoCalcutta" href="https://www.caluniv.ac.in/" aria-label="University of Calcutta official website">
+                <img src="https://www.caluniv.ac.in/assets/images/CU_LOGO-large-PNG.png" alt="University of Calcutta" />
+              </a>
               <p>
                 <strong>2008 to 2011</strong><br />
                 <a href="https://www.sxccal.edu/">St. Xavier’s College</a><br />

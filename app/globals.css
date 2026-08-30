@@ -1657,14 +1657,12 @@ footer {
   width: 48px;
 }
 
-.academicEducationEntry p {
-  margin: 0;
+.academicLogoCalcutta img {
+  width: 48px;
 }
 
-.academicEducationPlain {
-  margin-top: 15px;
-  padding-top: 13px;
-  border-top: 1px solid rgba(19, 41, 75, 0.13);
+.academicEducationEntry p {
+  margin: 0;
 }
 
 .academicMain .photoSection {
