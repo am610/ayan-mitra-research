@@ -1600,7 +1600,7 @@ footer {
   border: 5px solid #ffffff;
   border-radius: 2px;
   object-fit: cover;
-  object-position: center 33%;
+  object-position: center 40%;
   box-shadow: 0 3px 12px rgba(19, 41, 75, 0.14);
 }
 
