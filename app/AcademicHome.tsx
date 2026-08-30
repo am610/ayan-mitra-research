@@ -42,8 +42,8 @@ const recentNews = [
   },
   {
     date: "2025–2026",
-    title: "Awarded ACME-TNA Fellowship Grant",
-    href: "#",
+    title: "Awarded ACME-TNA Grant",
+    href: "https://www.acme-astro.eu/tna-calls-centre-of-expertise/",
   },
   {
     date: "Jul 2026",
