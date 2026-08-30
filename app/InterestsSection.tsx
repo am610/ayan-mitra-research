@@ -87,63 +87,98 @@ const musicItems: MediaItem[] = [
 ];
 
 export default function InterestsSection() {
-  const [activeFilter, setActiveFilter] = useState<"All" | "Talks & Seminars" | "Piano & Music">("All");
+  const [activeCategory, setActiveCategory] = useState<"Talks & Seminars" | "Piano & Music">("Talks & Seminars");
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const allItems = [...talkItems, ...musicItems];
+  const currentItems = activeCategory === "Talks & Seminars" ? talkItems : musicItems;
+  const currentItem = currentItems[activeIndex % currentItems.length];
 
-  const filteredItems =
-    activeFilter === "All"
-      ? allItems
-      : allItems.filter((item) => item.category === activeFilter);
+  const handleCategoryChange = (cat: "Talks & Seminars" | "Piano & Music") => {
+    setActiveCategory(cat);
+    setActiveIndex(0);
+  };
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev + currentItems.length - 1) % currentItems.length);
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % currentItems.length);
+  };
 
   return (
     <section className="academicSection interestsSection" id="interests" aria-labelledby="interestsHeading">
       <div className="academicSectionTitle">
-        <h2 id="interestsHeading">Talks, Media & Piano Performances</h2>
+        <h2 id="interestsHeading">Talks & Media</h2>
       </div>
 
       <div className="interestsFilterBar">
         <button
           type="button"
-          className={activeFilter === "All" ? "active" : ""}
-          onClick={() => setActiveFilter("All")}
+          className={activeCategory === "Talks & Seminars" ? "active" : ""}
+          onClick={() => handleCategoryChange("Talks & Seminars")}
         >
-          All Videos ({allItems.length})
+          🎓 Talks & Seminars ({talkItems.length})
         </button>
         <button
           type="button"
-          className={activeFilter === "Talks & Seminars" ? "active" : ""}
-          onClick={() => setActiveFilter("Talks & Seminars")}
-        >
-          🎓 Academic Talks ({talkItems.length})
-        </button>
-        <button
-          type="button"
-          className={activeFilter === "Piano & Music" ? "active" : ""}
-          onClick={() => setActiveFilter("Piano & Music")}
+          className={activeCategory === "Piano & Music" ? "active" : ""}
+          onClick={() => handleCategoryChange("Piano & Music")}
         >
           🎹 Piano Performances ({musicItems.length})
         </button>
       </div>
 
-      <div className="interestsGrid">
-        {filteredItems.map((item) => (
-          <article className="interestCard" key={item.id}>
-            <div className="videoEmbedContainer">
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}`}
-                title={item.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+      <div className="videoCarouselContainer">
+        <div className="videoCarouselCard">
+          <div className="videoEmbedContainer">
+            <iframe
+              key={currentItem.youtubeId}
+              src={`https://www.youtube-nocookie.com/embed/${currentItem.youtubeId}`}
+              title={currentItem.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <div className="videoCarouselInfo">
+            <div className="videoHeaderMeta">
+              <span className="interestCategory">{currentItem.category}</span>
+              <span className="videoCounter">{activeIndex + 1} of {currentItems.length}</span>
+            </div>
+            <h3>{currentItem.title}</h3>
+            <p>{currentItem.description}</p>
+            <a
+              href={`https://www.youtube.com/watch?v=${currentItem.youtubeId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="openInYoutubeBtn"
+            >
+              Watch on YouTube ↗
+            </a>
+          </div>
+        </div>
+
+        <div className="videoCarouselControls">
+          <div className="videoDots">
+            {currentItems.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                className={i === activeIndex ? "active" : ""}
+                onClick={() => setActiveIndex(i)}
+                aria-label={`Go to video ${i + 1}`}
               />
-            </div>
-            <div className="interestContent">
-              <span className="interestCategory">{item.category}</span>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
-          </article>
-        ))}
+            ))}
+          </div>
+          <div className="videoArrows">
+            <button type="button" onClick={handlePrev} aria-label="Previous video">
+              ← Previous
+            </button>
+            <button type="button" onClick={handleNext} aria-label="Next video">
+              Next →
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );

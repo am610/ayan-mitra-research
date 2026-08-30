@@ -1884,11 +1884,104 @@ footer {
   box-shadow: 0 3px 10px rgba(19, 41, 75, 0.2);
 }
 
-.interestsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-top: 20px;
+.videoCarouselContainer {
+  margin-top: 16px;
+}
+
+.videoCarouselCard {
+  background: #ffffff;
+  border: 1px solid rgba(19, 41, 75, 0.14);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(19, 41, 75, 0.08);
+}
+
+.videoCarouselInfo {
+  padding: 22px 24px 26px;
+}
+
+.videoHeaderMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.videoCounter {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.openInYoutubeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #13294b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.openInYoutubeBtn:hover {
+  color: #ff7f32;
+  text-decoration: underline;
+}
+
+.videoCarouselControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding: 0 4px;
+}
+
+.videoDots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.videoDots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(19, 41, 75, 0.2);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.videoDots button.active {
+  background: #ff7f32;
+  width: 24px;
+  border-radius: 5px;
+}
+
+.videoArrows {
+  display: flex;
+  gap: 10px;
+}
+
+.videoArrows button {
+  background: #ffffff;
+  border: 1px solid rgba(19, 41, 75, 0.2);
+  color: #13294b;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.videoArrows button:hover {
+  background: #13294b;
+  color: #ffffff;
+  border-color: #13294b;
 }
 
 .interestCard {
