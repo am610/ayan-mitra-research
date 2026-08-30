@@ -16,7 +16,7 @@ export const photosData: PhotoItem[] = [
     id: 2,
     src: "/photos/photo3.jpg",
     title: "Photos from the Past",
-    caption: "With collegues from Data Science bootcamp, Munish, Germany, 2016."
+    caption: "With collegues from Data Science bootcamp, Munich, Germany, 2016."
   },
   {
     id: 3,
@@ -29,12 +29,6 @@ export const photosData: PhotoItem[] = [
     src: "/photos/photo6.jpg",
     title: "Photos from the Past",
     caption: "Moscow State University, Moscow, Russia."
-  },
-  {
-    id: 5,
-    src: "/photos/photo7.jpg",
-    title: "Photos from the Past",
-    caption: "With Prof. Gautam Paul, ISI, Calcutta, India and Dr. Pritam Chattapadhyay."
   },
   {
     id: 6,
@@ -64,7 +58,7 @@ export const photosData: PhotoItem[] = [
     id: 10,
     src: "/photos/photo16.jpg",
     title: "Photos from the Past",
-    caption: "Zurich, Switzerland."
+    caption: "With Prof. Luca Amendola, Heidelberg University."
   },
   {
     id: 11,
@@ -142,7 +136,7 @@ export const photosData: PhotoItem[] = [
     id: 23,
     src: "/photos/photo38.jpg",
     title: "Photos from the Past",
-    caption: "CAPS Open day, NCSA, 2026"
+    caption: "SkAI, Chicago."
   },
   {
     id: 24,
@@ -172,7 +166,7 @@ export const photosData: PhotoItem[] = [
     id: 28,
     src: "/photos/photo43.jpg",
     title: "Photos from the Past",
-    caption: "LSSt DA Catalyst conference. Tucson, Arizona. 2025."
+    caption: "LSST DA Catalyst conference. Tucson, Arizona. 2025."
   },
   {
     id: 29,
