@@ -155,5 +155,11 @@ export const photosData: PhotoItem[] = [
     src: "/photos/photo47.jpg",
     title: "Photos from the Past",
     caption: "Princeton University."
+  },
+  {
+    id: 30,
+    src: "/photos/photo51.jpg",
+    title: "Photos from the Past",
+    caption: "Zurich DESC annual conference, 2024"
   }
 ];
