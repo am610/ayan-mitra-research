@@ -25,22 +25,10 @@ export const photosData: PhotoItem[] = [
     caption: "Lomonosov, Moscow State University, Russia."
   },
   {
-    id: 4,
-    src: "/photos/photo6.jpg",
-    title: "Photos from the Past",
-    caption: "Moscow State University, Moscow, Russia."
-  },
-  {
     id: 6,
     src: "/photos/photo8.jpg",
     title: "Photos from the Past",
     caption: "With Prof. Gautam Paul, ISI, Calcutta, India and Dr. Pritam Chattapadhyay."
-  },
-  {
-    id: 7,
-    src: "/photos/photo10.jpg",
-    title: "Photos from the Past",
-    caption: "With Dr. Veronica Dashkova, Astana, KZ."
   },
   {
     id: 8,
@@ -83,12 +71,6 @@ export const photosData: PhotoItem[] = [
     src: "/photos/photo22.jpg",
     title: "Photos from the Past",
     caption: "Conference Dinner."
-  },
-  {
-    id: 15,
-    src: "/photos/photo23.jpg",
-    title: "Photos from the Past",
-    caption: "After a talk, chilling"
   },
   {
     id: 16,

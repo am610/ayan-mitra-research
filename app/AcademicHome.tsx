@@ -98,14 +98,14 @@ export default function AcademicHome({
           <header className="academicIntro">
             <h1>Ayan Mitra</h1>
             <p>
-              <strong>Ayan Mitra</strong> is a Pipeline Scientist for the LSST Dark
+              I am a Pipeline Scientist for the LSST Dark
               Energy Science Collaboration and a CAPS Fellow at the National Center
               for Supercomputing Applications, University of Illinois Urbana Champaign.
               He develops reliable scientific workflows for supernova cosmology,
               time domain analysis, machine learning, and statistical inference.
             </p>
             <p>
-              His work connects realistic simulations, data validation, photometric
+              My work connects realistic simulations, data validation, photometric
               classification, uncertainty propagation, bias correction, and cosmological
               parameter estimation across large computing systems.
             </p>
