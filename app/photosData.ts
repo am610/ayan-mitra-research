@@ -52,7 +52,7 @@ export const photosData: PhotoItem[] = [
     id: 9,
     src: "/photos/photo14.jpg",
     title: "Photos from the Past",
-    caption: "With Prof. Gautam Paul, ISI, Calcutta, India and Dr. Pritam Chattapadhyay."
+    caption: "With Prof. Surhud More, IUCAA, Pune, India"
   },
   {
     id: 10,
@@ -106,19 +106,19 @@ export const photosData: PhotoItem[] = [
     id: 18,
     src: "/photos/photo29.jpg",
     title: "Photos from the Past",
-    caption: "Graduation Sussex University, 2013"
+    caption: "LSST-DA Catalyst Conference, Tucson, Arizona."
   },
   {
     id: 19,
     src: "/photos/photo30.jpg",
     title: "Photos from the Past",
-    caption: "Cambridge 2025."
+    caption: "Cambridge University, 2025."
   },
   {
     id: 20,
     src: "/photos/photo31.jpg",
     title: "Photos from the Past",
-    caption: "David Seery, Anthony Lewis in the back. Brighton, 2012."
+    caption: "Graduation Sussex University, 2013"
   },
   {
     id: 21,
