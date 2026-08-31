@@ -280,6 +280,12 @@ export default function AcademicHome({
           </section>
 
           <section>
+            <h2>Services</h2>
+            <p><a href="https://noirlab.edu/">NOIRLab</a> Time Allocation Committee (TAC) Panelist</p>
+            <p>Reviewer for MNRAS, AJ, ApJ, Universe, Nature Astronomy, and other journals</p>
+          </section>
+
+          <section>
             <h2>Experience</h2>
             <p><strong>2023 to present</strong><br />Pipeline Scientist, Rubin Observatory and LSST DESC</p>
             <p><strong>2021 to 2023</strong><br />LSST Postdoctoral Fellow, IUCAA</p>
