@@ -101,7 +101,7 @@ export default function AcademicHome({
               I am a Pipeline Scientist for the LSST Dark
               Energy Science Collaboration and a CAPS Fellow at the National Center
               for Supercomputing Applications, University of Illinois Urbana Champaign.
-              He develops reliable scientific workflows for supernova cosmology,
+              I develop reliable scientific workflows for supernova cosmology,
               time domain analysis, machine learning, and statistical inference.
             </p>
             <p>
