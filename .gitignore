@@ -40,3 +40,6 @@ yarn-error.log*
 /work/
 tmp/
 
+
+# scratch folder for files staged for manual deletion
+public/photos/_to_delete/
