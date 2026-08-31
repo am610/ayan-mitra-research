@@ -46,7 +46,7 @@ export const photosData: PhotoItem[] = [
     id: 8,
     src: "/photos/photo13.jpg",
     title: "Photos from the Past",
-    caption: "With Prof Surhud More, IUCAA, India."
+    caption: "With Prof Somak Roy Chowdhury, IUCAA, India."
   },
   {
     id: 9,
