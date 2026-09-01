@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ayan-mitra-research.ayanmitra.chatgpt.site"),
+  metadataBase: new URL("https://ayan-mitra-research.vercel.app"),
   title: "Ayan Mitra | Pipeline Scientist, LSST DESC",
   description:
     "Pipeline Scientist for LSST DESC working across cosmology, scientific machine learning, uncertainty, and reproducible computing.",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       "Cosmology, scientific AI, uncertainty, and reproducible research systems.",
     type: "website",
-    url: "https://ayan-mitra-research.ayanmitra.chatgpt.site",
+    url: "https://ayan-mitra-research.vercel.app",
     images: [
       {
         url: "/og.png",
@@ -53,6 +53,34 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ayan Mitra",
+              jobTitle: "Pipeline Scientist",
+              affiliation: [
+                {
+                  "@type": "Organization",
+                  name: "LSST Dark Energy Science Collaboration",
+                },
+                {
+                  "@type": "Organization",
+                  name: "National Center for Supercomputing Applications (NCSA), University of Illinois Urbana-Champaign",
+                },
+              ],
+              url: "https://ayan-mitra-research.vercel.app",
+              image: "https://ayan-mitra-research.vercel.app/ayan-mitra.jpg",
+              sameAs: [
+                "https://github.com/am610/",
+                "https://www.linkedin.com/in/ayan-mitra-supernova/",
+                "https://orcid.org/0000-0002-9436-8871",
+              ],
+            }),
+          }}
+        />
         <Script id="leadfeeder-tracker" strategy="afterInteractive">
           {`(function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('lAxoEaK0NRw8OYGd');`}
         </Script>

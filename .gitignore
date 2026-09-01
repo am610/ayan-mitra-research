@@ -43,3 +43,6 @@ tmp/
 
 # scratch folder for files staged for manual deletion
 public/photos/_to_delete/
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo
