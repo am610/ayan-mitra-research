@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ayan-mitra-research.vercel.app"),
-  title: "Ayan Mitra | Pipeline Scientist, LSST DESC",
+  title: "Ayan Mitra | Pipeline Scientist, NCSA / LSST DESC",
   description:
-    "Pipeline Scientist for LSST DESC working across cosmology, scientific machine learning, uncertainty, and reproducible computing.",
+    "Pipeline Scientist at NCSA, University of Illinois Urbana-Champaign, working across cosmology, scientific machine learning, uncertainty, and reproducible computing for LSST DESC.",
   openGraph: {
-    title: "Ayan Mitra | Pipeline Scientist, LSST DESC",
+    title: "Ayan Mitra | Pipeline Scientist, NCSA / LSST DESC",
     description:
-      "Cosmology, scientific AI, uncertainty, and reproducible research systems.",
+      "Pipeline Scientist at NCSA (UIUC) — cosmology, scientific AI, uncertainty, and reproducible research systems.",
     type: "website",
     url: "https://ayan-mitra-research.vercel.app",
     images: [
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ayan Mitra | Pipeline Scientist, LSST DESC",
+    title: "Ayan Mitra | Pipeline Scientist, NCSA / LSST DESC",
     description:
-      "Cosmology, scientific AI, uncertainty, and reproducible research systems.",
+      "Pipeline Scientist at NCSA (UIUC) — cosmology, scientific AI, uncertainty, and reproducible research systems.",
     images: ["/og.png"],
   },
 };

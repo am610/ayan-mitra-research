@@ -3,9 +3,9 @@ import PhotoCarousel from "./PhotoCarousel";
 import AcademicHome from "./AcademicHome";
 
 export const metadata: Metadata = {
-  title: "Ayan Mitra | Pipeline Scientist, LSST DESC",
+  title: "Ayan Mitra | Pipeline Scientist, NCSA / LSST DESC",
   description:
-    "Pipeline Scientist for LSST DESC working across cosmology, scientific machine learning, open research software, and reproducible computing.",
+    "Pipeline Scientist at NCSA, University of Illinois Urbana-Champaign, working across cosmology, scientific machine learning, open research software, and reproducible computing for LSST DESC.",
 };
 
 const researchAreas = [
