@@ -5,7 +5,7 @@ import AcademicHome from "./AcademicHome";
 export const metadata: Metadata = {
   title: "Ayan Mitra | Pipeline Scientist, NCSA / LSST DESC",
   description:
-    "Pipeline Scientist at NCSA, University of Illinois Urbana-Champaign, working across cosmology, scientific machine learning, open research software, and reproducible computing for LSST DESC.",
+    "Pipeline Scientist at NCSA, University of Illinois Urbana-Champaign, working across cosmology, scientific machine learning, uncertainty, and reproducible computing for LSST DESC.",
 };
 
 const researchAreas = [

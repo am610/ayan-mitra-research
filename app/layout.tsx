@@ -3,6 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
+const siteUrl = "https://ayan-mitra-research.vercel.app";
+const pageTitle = "Ayan Mitra | Pipeline Scientist, NCSA / LSST DESC";
+const pageDescription =
+  "Pipeline Scientist at NCSA, University of Illinois Urbana-Champaign, working across cosmology, scientific machine learning, uncertainty, and reproducible computing for LSST DESC.";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,16 +19,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ayan-mitra-research.vercel.app"),
-  title: "Ayan Mitra | Pipeline Scientist, NCSA / LSST DESC",
-  description:
-    "Pipeline Scientist at NCSA, University of Illinois Urbana-Champaign, working across cosmology, scientific machine learning, uncertainty, and reproducible computing for LSST DESC.",
+  metadataBase: new URL(siteUrl),
+  title: pageTitle,
+  description: pageDescription,
+  alternates: {
+    canonical: `${siteUrl}/`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Ayan Mitra | Pipeline Scientist, NCSA / LSST DESC",
-    description:
-      "Pipeline Scientist at NCSA (UIUC) — cosmology, scientific AI, uncertainty, and reproducible research systems.",
-    type: "website",
-    url: "https://ayan-mitra-research.vercel.app",
+    title: pageTitle,
+    description: pageDescription,
+    type: "profile",
+    url: `${siteUrl}/`,
     images: [
       {
         url: "/og.png",
@@ -35,9 +52,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ayan Mitra | Pipeline Scientist, NCSA / LSST DESC",
-    description:
-      "Pipeline Scientist at NCSA (UIUC) — cosmology, scientific AI, uncertainty, and reproducible research systems.",
+    title: pageTitle,
+    description: pageDescription,
     images: ["/og.png"],
   },
 };
@@ -58,25 +74,49 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Ayan Mitra",
-              jobTitle: "Pipeline Scientist",
-              affiliation: [
+              "@graph": [
                 {
-                  "@type": "Organization",
-                  name: "LSST Dark Energy Science Collaboration",
+                  "@type": "ProfilePage",
+                  "@id": `${siteUrl}/#profilepage`,
+                  url: `${siteUrl}/`,
+                  name: pageTitle,
+                  description: pageDescription,
+                  mainEntity: { "@id": `${siteUrl}/#person` },
                 },
                 {
-                  "@type": "Organization",
-                  name: "National Center for Supercomputing Applications (NCSA), University of Illinois Urbana-Champaign",
+                  "@type": "Person",
+                  "@id": `${siteUrl}/#person`,
+                  name: "Ayan Mitra",
+                  jobTitle: "Pipeline Scientist, LSST DESC",
+                  url: `${siteUrl}/`,
+                  image: `${siteUrl}/ayan-mitra.jpg`,
+                  affiliation: [
+                    {
+                      "@type": "Organization",
+                      name: "LSST Dark Energy Science Collaboration",
+                    },
+                    {
+                      "@type": "Organization",
+                      name: "National Center for Supercomputing Applications",
+                      parentOrganization: {
+                        "@type": "CollegeOrUniversity",
+                        name: "University of Illinois Urbana-Champaign",
+                      },
+                    },
+                  ],
+                  sameAs: [
+                    "https://github.com/am610/",
+                    "https://www.linkedin.com/in/ayan-mitra-supernova/",
+                    "https://orcid.org/0000-0002-9436-8871",
+                  ],
+                  knowsAbout: [
+                    "Type Ia supernova cosmology",
+                    "LSST data pipelines",
+                    "Scientific machine learning",
+                    "Uncertainty quantification",
+                    "Reproducible scientific computing",
+                  ],
                 },
-              ],
-              url: "https://ayan-mitra-research.vercel.app",
-              image: "https://ayan-mitra-research.vercel.app/ayan-mitra.jpg",
-              sameAs: [
-                "https://github.com/am610/",
-                "https://www.linkedin.com/in/ayan-mitra-supernova/",
-                "https://orcid.org/0000-0002-9436-8871",
               ],
             }),
           }}
