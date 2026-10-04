@@ -37,6 +37,11 @@ type AcademicHomeProps = {
 
 const recentNews = [
   {
+    date: "Oct 2026",
+    title: "Gave a seminar at the Boston University HET/Cosmo Seminar",
+    href: "https://sites.bu.edu/cosmology/events/?eid=321406",
+  },
+  {
     date: "2026",
     title: "Appointed as Panel Member for the NOIRLab Time Allocation Committee (2026B)",
     href: "https://noirlab.edu/",
