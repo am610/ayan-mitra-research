@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://ayan-mitra-research.vercel.app/sitemap.xml",
+    sitemap: "https://ayanmitra.com/sitemap.xml",
   };
 }

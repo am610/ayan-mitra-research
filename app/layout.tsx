@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
-const siteUrl = "https://ayan-mitra-research.vercel.app";
+const siteUrl = "https://ayanmitra.com";
 const pageTitle = "Ayan Mitra | Pipeline Scientist, NCSA / LSST DESC";
 const pageDescription =
   "Pipeline Scientist at NCSA, University of Illinois Urbana-Champaign, working across cosmology, scientific machine learning, uncertainty, and reproducible computing for LSST DESC.";
