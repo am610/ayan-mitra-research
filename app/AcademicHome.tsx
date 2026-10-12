@@ -38,6 +38,11 @@ type AcademicHomeProps = {
 const recentNews = [
   {
     date: "Oct 2026",
+    title: "Awarded 1,499 GPU hours on NCSA DeltaAI through an NSF ACCESS Explore allocation (PI)",
+    href: "https://allocations.access-ci.org/",
+  },
+  {
+    date: "Oct 2026",
     title: "Gave a seminar at the Boston University HET/Cosmo Seminar",
     href: "https://sites.bu.edu/cosmology/events/?eid=321406",
   },
