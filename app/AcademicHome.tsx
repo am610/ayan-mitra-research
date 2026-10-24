@@ -99,6 +99,13 @@ export default function AcademicHome({
             <a href="#photos">Photos</a>
             <a href="#interests">Interests</a>
             <a href="/Ayan_Mitra_CV.pdf">CV</a>
+            <a
+              href="https://drive.google.com/drive/folders/1Sr4PWaOAeZ1rUgfjF2_El8llAb30WtdX?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Certificates
+            </a>
           </div>
         </div>
       </nav>
