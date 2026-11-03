@@ -37,6 +37,11 @@ type AcademicHomeProps = {
 
 const recentNews = [
   {
+    date: "Nov 2026",
+    title: "Awarded $50,000 in Claude credits through Anthropic's AI for Science program",
+    href: "https://www.anthropic.com/",
+  },
+  {
     date: "Oct 2026",
     title: "Awarded 1,500 GPU hours on NCSA DeltaAI through an NSF ACCESS Explore allocation (PI)",
     href: "https://allocations.access-ci.org/",
@@ -291,6 +296,7 @@ export default function AcademicHome({
           <section>
             <h2>Recognition</h2>
             <p><a href="https://lsstdesc.org/pages/builders.html">LSST DESC Builder</a>, 2026</p>
+            <p><a href="https://www.anthropic.com/">Anthropic AI for Science</a> Awardee, 2026</p>
             <p>CAPS Fellow</p>
             <p>Rubin Postdoctoral Fellow</p>
             <p>Lagrange Fellow<br />Institut d’Astrophysique de Paris, during PhD</p>
