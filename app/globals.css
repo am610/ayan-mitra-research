@@ -1437,10 +1437,33 @@ footer {
   border-bottom-color: #ff7f32;
 }
 
+.academicHero {
+  width: min(1100px, calc(100% - 32px));
+  margin: 22px auto 0;
+  overflow: hidden;
+  background: #000000;
+  box-shadow: 0 10px 32px rgba(19, 41, 75, 0.11);
+}
+
+.academicHero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.academicVisuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 .academicFrame {
   display: grid;
   width: min(1100px, calc(100% - 32px));
-  margin: 22px auto 0;
+  margin: 16px auto 0;
   overflow: hidden;
   border: 1px solid #dfe4e8;
   background: #ffffff;

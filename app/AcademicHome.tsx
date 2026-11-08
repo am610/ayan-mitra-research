@@ -115,10 +115,20 @@ export default function AcademicHome({
         </div>
       </nav>
 
+      <div className="academicHero">
+        <img
+          src="/hero-banner.jpg"
+          alt="Ayan Mitra working at a laptop in a wood-paneled room"
+          width={2000}
+          height={598}
+          fetchPriority="high"
+        />
+      </div>
+
       <div className="academicFrame">
         <main className="academicMain">
           <header className="academicIntro">
-            <h1>Ayan Mitra</h1>
+            <h1 className="academicVisuallyHidden">Ayan Mitra</h1>
             <p>
               I am a Pipeline Scientist for the LSST Dark
               Energy Science Collaboration and a CAPS Fellow at the National Center
